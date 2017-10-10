@@ -10,6 +10,18 @@ export const appColors = {
   lightGreen: "rgb(143, 217, 124)"
 };
 
+export const DrumMachineShell = styled.div`
+  height: 70vh;
+  width: 90vh;
+  border: 3px solid ${appColors.darkBlue};
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const Display = styled.div`
   background-color: ${appColors.gray};
   margin: 5px;
@@ -27,11 +39,19 @@ export const DrumPadArea = styled.div`
   width: 100%;
 `;
 
-export const DrumPad = styled.div`
+export const DrumPad = styled.button`
   background-color: ${appColors.lightBlueGreen};
   border-radius: 3px;
   flex: 1 0 auto;
   width: 25%;
   margin: 10px;
-  box-shadow: 1px 1px 10px #111;
+  text-align: center;
+  box-shadow: 2px 2px 4px #666;
+  border-color: #ddd;
+  outline: none;
+
+  &:active {
+    transform: translateY(4px) translateX(2px);
+    box-shadow: invert 4px 4px 2px #888;
+  }
 `;

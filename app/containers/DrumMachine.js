@@ -1,27 +1,26 @@
 import styled from "styled-components";
 import React from "react";
 import { appColors } from "../PresentationComponents";
-import { Display, DrumPadArea, DrumPad } from "../PresentationComponents";
+import { DrumMachineShell, Display, DrumPadArea } from "../PresentationComponents";
+import { DrumPadContainer } from "./DrumPadContainer";
+import { drumKitSounds } from "../drumKitSounds";
 
-const DrumMachineShell = styled.div`
-  height: 70vh;
-  width: 90vh;
-  border: 3px solid ${appColors.darkBlue};
-  border-radius: 5px;
-  box-shadow: 3px 3px 10px black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
-
+let padSounds = Object.getOwnPropertyNames(drumKitSounds);
 export class DrumMachine extends React.Component {
   render() {
     return (
       <DrumMachineShell id="drum-machine">
         <Display id="display" />
         <DrumPadArea>
-          <DrumPad className="drum-pad" />
+          <DrumPadContainer id={padSounds[0]} firingKey="Q" />
+          <DrumPadContainer id={padSounds[1]} firingKey="W" />
+          <DrumPadContainer id={padSounds[2]} firingKey="E" />
+          <DrumPadContainer id={padSounds[3]} firingKey="A" />
+          <DrumPadContainer id={padSounds[4]} firingKey="S" />
+          <DrumPadContainer id={padSounds[5]} firingKey="D" />
+          <DrumPadContainer id={padSounds[6]} firingKey="Z" />
+          <DrumPadContainer id={padSounds[7]} firingKey="X" />
+          <DrumPadContainer id={padSounds[8]} firingKey="C" />
         </DrumPadArea>
       </DrumMachineShell>
     );
