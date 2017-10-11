@@ -3,6 +3,14 @@
 
 <head>
     <title>Drum Machine</title>
+    <script>
+        document.onkeydown = function (e) {
+            var audioClip = document.getElementById(e.key.toUpperCase())
+            if (audioClip != undefined) {
+                audioClip.click()
+            }
+        }
+    </script>
 </head>
 
 <body style="margin: 0">

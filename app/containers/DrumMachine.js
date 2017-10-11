@@ -3,24 +3,61 @@ import React from "react";
 import { appColors } from "../PresentationComponents";
 import { DrumMachineShell, Display, DrumPadArea } from "../PresentationComponents";
 import { DrumPadContainer } from "./DrumPadContainer";
-import { drumKitSounds } from "../drumKitSounds";
+import { drumKitSoundsList } from "../drumKitSoundsList";
 
-let padSounds = Object.getOwnPropertyNames(drumKitSounds);
+let currentPadSounds = drumKitSoundsList;
+let padSoundsKeys = Object.getOwnPropertyNames(drumKitSoundsList);
 export class DrumMachine extends React.Component {
   render() {
     return (
       <DrumMachineShell id="drum-machine">
         <Display id="display" />
         <DrumPadArea>
-          <DrumPadContainer id={padSounds[0]} firingKey="Q" />
-          <DrumPadContainer id={padSounds[1]} firingKey="W" />
-          <DrumPadContainer id={padSounds[2]} firingKey="E" />
-          <DrumPadContainer id={padSounds[3]} firingKey="A" />
-          <DrumPadContainer id={padSounds[4]} firingKey="S" />
-          <DrumPadContainer id={padSounds[5]} firingKey="D" />
-          <DrumPadContainer id={padSounds[6]} firingKey="Z" />
-          <DrumPadContainer id={padSounds[7]} firingKey="X" />
-          <DrumPadContainer id={padSounds[8]} firingKey="C" />
+          <DrumPadContainer
+            id={padSoundsKeys[0]}
+            firingKey="Q"
+            audioFile={currentPadSounds[padSoundsKeys[0]]}
+          />
+          <DrumPadContainer
+            id={padSoundsKeys[1]}
+            firingKey="W"
+            audioFile={currentPadSounds[padSoundsKeys[1]]}
+          />
+          <DrumPadContainer
+            id={padSoundsKeys[2]}
+            firingKey="E"
+            audioFile={currentPadSounds[padSoundsKeys[2]]}
+          />
+          <DrumPadContainer
+            id={padSoundsKeys[3]}
+            firingKey="A"
+            audioFile={currentPadSounds[padSoundsKeys[3]]}
+          />
+          <DrumPadContainer
+            id={padSoundsKeys[4]}
+            firingKey="S"
+            audioFile={currentPadSounds[padSoundsKeys[4]]}
+          />
+          <DrumPadContainer
+            id={padSoundsKeys[5]}
+            firingKey="D"
+            audioFile={currentPadSounds[padSoundsKeys[5]]}
+          />
+          <DrumPadContainer
+            id={padSoundsKeys[6]}
+            firingKey="Z"
+            audioFile={currentPadSounds[padSoundsKeys[6]]}
+          />
+          <DrumPadContainer
+            id={padSoundsKeys[7]}
+            firingKey="X"
+            audioFile={currentPadSounds[padSoundsKeys[7]]}
+          />
+          <DrumPadContainer
+            id={padSoundsKeys[8]}
+            firingKey="C"
+            audioFile={currentPadSounds[padSoundsKeys[8]]}
+          />
         </DrumPadArea>
       </DrumMachineShell>
     );

@@ -1,9 +1,9 @@
+//#region imports
 import ReactTestUtils from "react-dom/test-utils";
 import TestRenderer from "react-test-renderer";
 import React from "react";
-// Elements from the app required for testing
-import { Display } from "../app/PresentationComponents";
 import { DrumMachine } from "../app/containers/DrumMachine";
+//#endregion
 
 describe("freeCodeCamp Testable Project tests", () => {
   // Load drum machine into memory to run tests against it
@@ -13,8 +13,8 @@ describe("freeCodeCamp Testable Project tests", () => {
   describe("Drum Machine", () => {
     it("should have an outer container with a corresponding id='drum-machine' that contains all other elements", () => {
       // Unable to test for elements contained by, not sure of the syntax:
-      // drumMachine.children returns unexpected results
-      expect(drumMachine.findByProps({ id: "drum-machine" })).not.toEqual(undefined);
+      // drumMachine.children returns unexpected results.
+      expect(drumMachine.findByProps({ id: "drum-machine" })).toBeTruthy();
     });
     it('should have an element within #drum-machine that has an id="display"', () => {
       expect(drumMachine.findByProps({ id: "display" })).not.toBe(undefined);
@@ -26,6 +26,7 @@ describe("freeCodeCamp Testable Project tests", () => {
   describe("Drum Pads", () => {
     // Load drum pads into an array for testing the drum pads
     var drumPads = drumMachine.findAllByProps({ className: "drum-pad" });
+    var audioClips = drumPads.map(drumPad => drumPad.findByType("audio"));
 
     it("should have a unique id that describes the audio clip the drum pad will be set up to trigger", () => {
       // Cannot test for relevance of id to audio clip, consider removing that text from the test.
@@ -45,15 +46,29 @@ describe("freeCodeCamp Testable Project tests", () => {
       expect(repeatIdsExist).toBe(false);
     });
     it("should have an inner text that corresponds to one of these 9 keys on the keyboard: Q, W, E, A, S, D, Z, X, C", () => {
+      pending(
+        "This test requires a full rendering of the components instead of the test render, need a different tool"
+      );
       let validLetters = ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"];
-      // let drumPadsInnerText = drumPads.map(drumPad => drumPad.innerHTML);
-      // for (let text in drumPadsInnerText) {
-      //   expect(validLetters.includes(text)).toBe(true);
-      // }
+      let drumPadsInnerText = drumPads.map(drumPad => drumPad.props);
+      for (let i = 0, len = drumPadsInnerText.length; i < len; i++) {
+        expect(validLetters.includes(drumPadsInnerText[i])).toBe(true);
+      }
     });
-    it("should have an HTML5 Audio element with a src attribute pointing to an audio clip", () => {
-      // for (let drumPad in drumPads) {
-      // }
+    it("should have an HTML5 Audio element", () => {
+      expect(audioClips.length).toEqual(drumPads.length);
+    });
+    it("the audio clip should have a src attribute pointing to an audio clip", () => {
+      audioClips.forEach(clip => expect(clip.props.src).toMatch(/\.(mp3|wav)$/));
+    });
+    it("should play the audio clip when I click the drum pad", () => {
+      pending("A separate testing library required to enable clicking on elements");
+      expect(drumPads[0].props.onClick).not.toBe(undefined);
+    });
+    it("should play the audio clip when I press the key associated with the pad", () => {
+      pending(
+        "A separate testing library required to enable checking for testing the document scripts"
+      );
     });
   });
 });

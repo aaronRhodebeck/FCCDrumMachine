@@ -15,6 +15,7 @@ class App extends React.Component {
           alignItems: "center",
           justifyContent: "center"
         }}
+        onKeyPress={this.handleKeyPress}
       >
         <DrumMachine id="drum-machine" />
       </div>
