@@ -75,8 +75,15 @@ describe("freeCodeCamp Testable Project tests", () => {
   });
   describe("Display", () => {
     //#region Display setup
-    var display = drumMachine.findByType("display");
+    var display = drumMachine.findByProps({ id: "display" });
     //#endregion
-    it("should display a string representing the sound that played, each string must be unique", () => {});
+    it("should display a string representing the sound that played, each string must be unique", () => {
+      pending("A separate testing library is required for testing clicks and inner html");
+      // Test will look similar to this
+      drumPads[0].click();
+      let audioClipName = drumPads[0].props.id;
+      let displayText = display.findByType("p").innerHTML;
+      expect(displayText).toEqual(audioClipName);
+    });
   });
 });

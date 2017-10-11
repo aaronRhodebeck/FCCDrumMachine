@@ -40,7 +40,7 @@ export class DrumPadContainer extends React.Component {
       thisPad.style[styleToChange] = buttonClickStyleChanges[styleToChange];
     }
     // Reset the css back to the original style
-    setTimeout(() => (thisPad.style = styleBeforePress), 20);
+    setTimeout(() => (thisPad.style = styleBeforePress), 70);
   }
 
   playAudioClip() {
@@ -48,6 +48,7 @@ export class DrumPadContainer extends React.Component {
     audio.pause();
     audio.currentTime = 0;
     audio.play();
+    this.props.onFire(this.props.id);
   }
 
   render() {

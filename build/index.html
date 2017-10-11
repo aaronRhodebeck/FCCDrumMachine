@@ -3,10 +3,22 @@
 
 <head>
     <title>Drum Machine</title>
+    <script>
+        document.onkeydown = function (e) {
+            if (e.key) {
+                var audioClip = document.getElementById(e.key.toUpperCase())
+                if (audioClip != undefined) {
+                    audioClip.click();
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 </head>
 
 <body style="margin: 0">
     <div id="app"></div>
+    <!-- <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script> -->
 <script type="text/javascript" src="transformed.js"></script></body>
 
 </html>

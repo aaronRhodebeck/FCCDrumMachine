@@ -697,10 +697,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.DrumPad = exports.DrumPadArea = exports.Display = exports.DrumMachineShell = exports.appColors = undefined;
 
-var _templateObject = _taggedTemplateLiteral(["\n  height: 70vh;\n  width: 90vh;\n  border: 3px solid ", ";\n  border-radius: 5px;\n  box-shadow: 3px 3px 10px black;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n"], ["\n  height: 70vh;\n  width: 90vh;\n  border: 3px solid ", ";\n  border-radius: 5px;\n  box-shadow: 3px 3px 10px black;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n  background-color: ", ";\n  margin: 5px;\n  height: 10%;\n  width: 70%;\n  box-shadow: inset 0 0 5px #111;\n"], ["\n  background-color: ", ";\n  margin: 5px;\n  height: 10%;\n  width: 70%;\n  box-shadow: inset 0 0 5px #111;\n"]),
-    _templateObject3 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: row;\n  flex: 1;\n  background-color: ", ";\n  width: 100%;\n"], ["\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: row;\n  flex: 1;\n  background-color: ", ";\n  width: 100%;\n"]),
-    _templateObject4 = _taggedTemplateLiteral(["\n  background-color: ", ";\n  border-radius: 3px;\n  flex: 1 0 auto;\n  width: 25%;\n  margin: 10px;\n  text-align: center;\n  box-shadow: 2px 2px 4px #666;\n  border-color: #ddd;\n  outline: none;\n\n  &:active {\n    transform: translateY(4px) translateX(2px);\n    box-shadow: invert 4px 4px 2px #888;\n  }\n"], ["\n  background-color: ", ";\n  border-radius: 3px;\n  flex: 1 0 auto;\n  width: 25%;\n  margin: 10px;\n  text-align: center;\n  box-shadow: 2px 2px 4px #666;\n  border-color: #ddd;\n  outline: none;\n\n  &:active {\n    transform: translateY(4px) translateX(2px);\n    box-shadow: invert 4px 4px 2px #888;\n  }\n"]);
+var _templateObject = _taggedTemplateLiteral(["\n  height: 70vh;\n  width: 90vh;\n  border: 3px solid ", ";\n  border-radius: 5px;\n  box-shadow: 1px 0px 10px black;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  background-color: #444;\n"], ["\n  height: 70vh;\n  width: 90vh;\n  border: 3px solid ", ";\n  border-radius: 5px;\n  box-shadow: 1px 0px 10px black;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  background-color: #444;\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n  background-color: ", ";\n  margin: 5px;\n  height: 10%;\n  width: 70%;\n  box-shadow: inset 0 0 5px #111;\n  text-align: center;\n  vertical-align: middle;\n  font-family: VT323, monospace;\n  font-weight: ;\n  font-size: 1.7em;\n  color: #444;\n"], ["\n  background-color: ", ";\n  margin: 5px;\n  height: 10%;\n  width: 70%;\n  box-shadow: inset 0 0 5px #111;\n  text-align: center;\n  vertical-align: middle;\n  font-family: VT323, monospace;\n  font-weight: ;\n  font-size: 1.7em;\n  color: #444;\n"]),
+    _templateObject3 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: row;\n  flex: 1;\n  background-color: #444;\n  width: 100%;\n"], ["\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: row;\n  flex: 1;\n  background-color: #444;\n  width: 100%;\n"]),
+    _templateObject4 = _taggedTemplateLiteral(["\n  background-color: ", ";\n  border-radius: 3px;\n  flex: 1 0 auto;\n  width: 25%;\n  margin: 10px;\n  text-align: center;\n  box-shadow: 2px 2px 4px #666;\n  border-color: #dca;\n  outline: none;\n  font-size: 1.5em;\n  color: ", ";\n  font-weight: bold;\n\n  &:active {\n    transform: translateY(4px) translateX(2px);\n    box-shadow: invert 4px 4px 2px #888;\n    background: ", ";\n    color: ", ";\n  }\n"], ["\n  background-color: ", ";\n  border-radius: 3px;\n  flex: 1 0 auto;\n  width: 25%;\n  margin: 10px;\n  text-align: center;\n  box-shadow: 2px 2px 4px #666;\n  border-color: #dca;\n  outline: none;\n  font-size: 1.5em;\n  color: ", ";\n  font-weight: bold;\n\n  &:active {\n    transform: translateY(4px) translateX(2px);\n    box-shadow: invert 4px 4px 2px #888;\n    background: ", ";\n    color: ", ";\n  }\n"]);
 
 var _styledComponents = __webpack_require__(17);
 
@@ -716,20 +716,20 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var appColors = exports.appColors = {
   lightPurple: "rgb(111, 124, 178)",
-  gray: "rgb(216, 225, 225)",
+  gray: "rgb(230, 235, 225)",
   lightBlueGreen: "rgb(91, 159, 159)",
   blue: "rgb(64, 81, 151)",
   darkBlue: "rgb(29, 49, 132)",
-  lightGreen: "rgb(143, 217, 124)"
+  lightGreen: "rgb(110, 190, 124)"
 };
 
 var DrumMachineShell = exports.DrumMachineShell = _styledComponents2.default.div(_templateObject, appColors.darkBlue);
 
 var Display = exports.Display = _styledComponents2.default.div(_templateObject2, appColors.gray);
 
-var DrumPadArea = exports.DrumPadArea = _styledComponents2.default.div(_templateObject3, appColors.darkBlue);
+var DrumPadArea = exports.DrumPadArea = _styledComponents2.default.div(_templateObject3);
 
-var DrumPad = exports.DrumPad = _styledComponents2.default.button(_templateObject4, appColors.lightBlueGreen);
+var DrumPad = exports.DrumPad = _styledComponents2.default.button(_templateObject4, appColors.lightBlueGreen, appColors.darkBlue, appColors.lightGreen, appColors.lightPurple);
 
 /***/ }),
 /* 11 */
@@ -3307,7 +3307,8 @@ var App = function (_React$Component) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center"
-          }
+          },
+          onKeyPress: this.handleKeyPress
         },
         _react2.default.createElement(_DrumMachine.DrumMachine, { id: "drum-machine" })
       );
@@ -25160,40 +25161,98 @@ var padSoundsKeys = Object.getOwnPropertyNames(_drumKitSoundsList.drumKitSoundsL
 var DrumMachine = exports.DrumMachine = function (_React$Component) {
   _inherits(DrumMachine, _React$Component);
 
-  function DrumMachine() {
+  function DrumMachine(props) {
     _classCallCheck(this, DrumMachine);
 
-    return _possibleConstructorReturn(this, (DrumMachine.__proto__ || Object.getPrototypeOf(DrumMachine)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (DrumMachine.__proto__ || Object.getPrototypeOf(DrumMachine)).call(this, props));
+
+    _this.state = { lastButtonPressed: "" };
+    _this.drumPadFired = _this.drumPadFired.bind(_this);
+    return _this;
   }
 
   _createClass(DrumMachine, [{
+    key: "drumPadFired",
+    value: function drumPadFired(padSound) {
+      var displaySound = padSound.replace(/([A-Z])/g, function (match) {
+        return " " + match;
+      }).replace(/^([a-z])/, function (match) {
+        return match.toUpperCase();
+      });
+      this.setState({ lastButtonPressed: displaySound });
+    }
+  }, {
     key: "render",
     value: function render() {
-      console.log(currentPadSounds);
       return _react2.default.createElement(
         _PresentationComponents.DrumMachineShell,
         { id: "drum-machine" },
-        _react2.default.createElement(_PresentationComponents.Display, { id: "display" }),
+        _react2.default.createElement(
+          _PresentationComponents.Display,
+          { id: "display" },
+          _react2.default.createElement(
+            "p",
+            { style: { position: "relative", display: "inline", top: "15%" } },
+            this.state.lastButtonPressed
+          )
+        ),
         _react2.default.createElement(
           _PresentationComponents.DrumPadArea,
           null,
           _react2.default.createElement(_DrumPadContainer.DrumPadContainer, {
             id: padSoundsKeys[0],
             firingKey: "Q",
-            src: currentPadSounds[padSoundsKeys[0]]
+            audioFile: currentPadSounds[padSoundsKeys[0]],
+            onFire: this.drumPadFired
           }),
           _react2.default.createElement(_DrumPadContainer.DrumPadContainer, {
             id: padSoundsKeys[1],
             firingKey: "W",
-            audioFile: currentPadSounds[padSoundsKeys[1]]
+            audioFile: currentPadSounds[padSoundsKeys[1]],
+            onFire: this.drumPadFired
           }),
-          _react2.default.createElement(_DrumPadContainer.DrumPadContainer, { id: padSoundsKeys[2], firingKey: "E" }),
-          _react2.default.createElement(_DrumPadContainer.DrumPadContainer, { id: padSoundsKeys[3], firingKey: "A" }),
-          _react2.default.createElement(_DrumPadContainer.DrumPadContainer, { id: padSoundsKeys[4], firingKey: "S" }),
-          _react2.default.createElement(_DrumPadContainer.DrumPadContainer, { id: padSoundsKeys[5], firingKey: "D" }),
-          _react2.default.createElement(_DrumPadContainer.DrumPadContainer, { id: padSoundsKeys[6], firingKey: "Z" }),
-          _react2.default.createElement(_DrumPadContainer.DrumPadContainer, { id: padSoundsKeys[7], firingKey: "X" }),
-          _react2.default.createElement(_DrumPadContainer.DrumPadContainer, { id: padSoundsKeys[8], firingKey: "C" })
+          _react2.default.createElement(_DrumPadContainer.DrumPadContainer, {
+            id: padSoundsKeys[2],
+            firingKey: "E",
+            audioFile: currentPadSounds[padSoundsKeys[2]],
+            onFire: this.drumPadFired
+          }),
+          _react2.default.createElement(_DrumPadContainer.DrumPadContainer, {
+            id: padSoundsKeys[3],
+            firingKey: "A",
+            audioFile: currentPadSounds[padSoundsKeys[3]],
+            onFire: this.drumPadFired
+          }),
+          _react2.default.createElement(_DrumPadContainer.DrumPadContainer, {
+            id: padSoundsKeys[4],
+            firingKey: "S",
+            audioFile: currentPadSounds[padSoundsKeys[4]],
+            onFire: this.drumPadFired
+          }),
+          _react2.default.createElement(_DrumPadContainer.DrumPadContainer, {
+            id: padSoundsKeys[5],
+            firingKey: "D",
+            audioFile: currentPadSounds[padSoundsKeys[5]],
+            onFire: this.drumPadFired
+          }),
+          _react2.default.createElement(_DrumPadContainer.DrumPadContainer, {
+            id: padSoundsKeys[6],
+            firingKey: "Z",
+            audioFile: currentPadSounds[padSoundsKeys[6]],
+            onFire: this.drumPadFired
+          }),
+          _react2.default.createElement(_DrumPadContainer.DrumPadContainer, {
+            id: padSoundsKeys[7],
+            firingKey: "X",
+            audioFile: currentPadSounds[padSoundsKeys[7]],
+            onFire: this.drumPadFired
+          }),
+          _react2.default.createElement(_DrumPadContainer.DrumPadContainer, {
+            id: padSoundsKeys[8],
+            firingKey: "C",
+            audioFile: currentPadSounds[padSoundsKeys[8]],
+            onFire: this.drumPadFired
+          })
         )
       );
     }
@@ -25240,19 +25299,60 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var DrumPadContainer = exports.DrumPadContainer = function (_React$Component) {
   _inherits(DrumPadContainer, _React$Component);
 
-  function DrumPadContainer() {
+  function DrumPadContainer(props) {
     _classCallCheck(this, DrumPadContainer);
 
-    return _possibleConstructorReturn(this, (DrumPadContainer.__proto__ || Object.getPrototypeOf(DrumPadContainer)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (DrumPadContainer.__proto__ || Object.getPrototypeOf(DrumPadContainer)).call(this, props));
+
+    _this.handleClick = _this.handleClick.bind(_this);
+    _this.playAudioClip = _this.playAudioClip.bind(_this);
+    _this.animateButton = _this.animateButton.bind(_this);
+    return _this;
   }
 
   _createClass(DrumPadContainer, [{
     key: "handleClick",
-    value: function handleClick() {}
+    value: function handleClick() {
+      this.playAudioClip();
+      this.animateButton();
+    }
+  }, {
+    key: "animateButton",
+    value: function animateButton() {
+      // store the DrumPad that should be animated
+      var thisPad = document.getElementById(this.props.id);
+      // Store the original css of the button to reset after animation
+      var styleBeforePress = thisPad.style;
+
+      // Copied from the css in the button :active psudeo class
+      var buttonClickStyleChanges = {
+        transform: "translateY(4px) translateX(2px)",
+        boxShadow: "invert 4px 4px 2px #888",
+        background: _PresentationComponents.appColors.lightGreen,
+        color: _PresentationComponents.appColors.lightPurple
+      };
+
+      // Iterate through the styles and set each style property of the Drum Pad
+      for (var styleToChange in buttonClickStyleChanges) {
+        thisPad.style[styleToChange] = buttonClickStyleChanges[styleToChange];
+      }
+      // Reset the css back to the original style
+      setTimeout(function () {
+        return thisPad.style = styleBeforePress;
+      }, 70);
+    }
+  }, {
+    key: "playAudioClip",
+    value: function playAudioClip() {
+      var audio = document.getElementById(this.props.firingKey);
+      audio.pause();
+      audio.currentTime = 0;
+      audio.play();
+      this.props.onFire(this.props.id);
+    }
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props.audioFile);
       return _react2.default.createElement(
         _PresentationComponents.DrumPad,
         { id: this.props.id, className: "drum-pad", onClick: this.handleClick },
