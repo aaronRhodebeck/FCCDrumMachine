@@ -4,7 +4,7 @@
   "description": "A drum machine for freeCodeCamp's beta front end libraries challenges",
   "main": "index.js",
   "scripts": {
-    "test": "node ./spec/support/run.js",
+    "test": "babel-node ./spec/support/run.js",
     "start": "webpack-dev-server",
     "build": "webpack"
   },
@@ -16,12 +16,16 @@
     "styled-components": "^2.2.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "file-loader": "^1.1.5",
     "html-webpack-plugin": "^2.30.1",
     "jasmine": "^2.8.0",
     "jasmine-spec-reporter": "^4.2.1",
+    "react-test-renderer": "^16.0.0",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
   }
