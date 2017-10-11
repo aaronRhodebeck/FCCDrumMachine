@@ -6,10 +6,11 @@ import { DrumMachine } from "../app/containers/DrumMachine";
 //#endregion
 
 describe("freeCodeCamp Testable Project tests", () => {
+  //#region All projects setup
   // Load drum machine into memory to run tests against it
   var testRenderer = TestRenderer.create(<DrumMachine />);
   var drumMachine = testRenderer.root;
-
+  //#endregion
   describe("Drum Machine", () => {
     it("should have an outer container with a corresponding id='drum-machine' that contains all other elements", () => {
       // Unable to test for elements contained by, not sure of the syntax:
@@ -24,10 +25,11 @@ describe("freeCodeCamp Testable Project tests", () => {
     });
   });
   describe("Drum Pads", () => {
+    //#region Drum Pads setup
     // Load drum pads into an array for testing the drum pads
     var drumPads = drumMachine.findAllByProps({ className: "drum-pad" });
     var audioClips = drumPads.map(drumPad => drumPad.findByType("audio"));
-
+    //#endregion
     it("should have a unique id that describes the audio clip the drum pad will be set up to trigger", () => {
       // Cannot test for relevance of id to audio clip, consider removing that text from the test.
       var drumPadIds = [];
@@ -70,5 +72,11 @@ describe("freeCodeCamp Testable Project tests", () => {
         "A separate testing library required to enable checking for testing the document scripts"
       );
     });
+  });
+  describe("Display", () => {
+    //#region Display setup
+    var display = drumMachine.findByType("display");
+    //#endregion
+    it("should display a string representing the sound that played, each string must be unique", () => {});
   });
 });

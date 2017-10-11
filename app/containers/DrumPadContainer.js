@@ -1,5 +1,5 @@
 import React from "react";
-import { DrumPad } from "../PresentationComponents";
+import { DrumPad, appColors } from "../PresentationComponents";
 
 /**
  * Props expected: 
@@ -16,12 +16,32 @@ export class DrumPadContainer extends React.Component {
     this.animateButton = this.animateButton.bind(this);
   }
 
-  handleClick(e) {
+  handleClick() {
     this.playAudioClip();
     this.animateButton();
   }
 
-  animateButton() {}
+  animateButton() {
+    // store the DrumPad that should be animated
+    var thisPad = document.getElementById(this.props.id);
+    // Store the original css of the button to reset after animation
+    var styleBeforePress = thisPad.style;
+
+    // Copied from the css in the button :active psudeo class
+    var buttonClickStyleChanges = {
+      transform: "translateY(4px) translateX(2px)",
+      boxShadow: "invert 4px 4px 2px #888",
+      background: appColors.lightGreen,
+      color: appColors.lightPurple
+    };
+
+    // Iterate through the styles and set each style property of the Drum Pad
+    for (let styleToChange in buttonClickStyleChanges) {
+      thisPad.style[styleToChange] = buttonClickStyleChanges[styleToChange];
+    }
+    // Reset the css back to the original style
+    setTimeout(() => (thisPad.style = styleBeforePress), 20);
+  }
 
   playAudioClip() {
     let audio = document.getElementById(this.props.firingKey);

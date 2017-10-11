@@ -7,7 +7,7 @@ export const appColors = {
   lightBlueGreen: "rgb(91, 159, 159)",
   blue: "rgb(64, 81, 151)",
   darkBlue: "rgb(29, 49, 132)",
-  lightGreen: "rgb(143, 217, 124)"
+  lightGreen: "rgb(110, 190, 124)"
 };
 
 export const DrumMachineShell = styled.div`
@@ -49,9 +49,14 @@ export const DrumPad = styled.button`
   box-shadow: 2px 2px 4px #666;
   border-color: #ddd;
   outline: none;
+  font-size: 1.5em;
+  color: ${appColors.darkBlue};
+  font-weight: bold;
 
   &:active {
     transform: translateY(4px) translateX(2px);
     box-shadow: invert 4px 4px 2px #888;
+    background: ${appColors.lightGreen};
+    color: ${appColors.lightPurple};
   }
 `;
